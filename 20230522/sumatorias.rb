@@ -22,5 +22,9 @@ puts "la suma es : #{suma2}"
 suma3 = 0
 for i in 1..10 do
     suma3 = suma3 + i
+    puts "la suma parcial es : #{suma3}"
+
+    #resultado = suma3 +=i #resultado = (suma3 = suma3 + i)
+    #puts "resultado: #{resultado}"
 end
 puts "la suma es : #{suma3}"
