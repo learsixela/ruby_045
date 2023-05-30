@@ -9,15 +9,17 @@ puts elemento
 numeros_string.push(elemento)
 
 #arreglo resultante
-puts numeros_string.to_s
+puts numeros_string.to_s #["1","2","3","2","2","4"]
 
 #ELIMINAR UN ELEMENTO DEL ARREGLO
 numeros_string.delete("2")#elimina todos los elemento coincidentes con el "2"
 
 #arreglo resultante
-puts numeros_string.to_s
+puts numeros_string.to_s#["1","3","4"]
 
 numeros_string.pop()#elimina el ultimo elemento del arreglo si existe
+#arreglo resultante
+puts numeros_string.to_s#["1","3"]
 numeros_string.pop()
 #arreglo resultante
 puts numeros_string.to_s#["1"]
