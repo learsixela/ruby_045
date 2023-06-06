@@ -4,15 +4,19 @@
 #creacion/definicion de clase(MOLDE) Persona
 class Persona
     #atributos
-    attr_reader :nombre, :edad, :peso #get
-    attr_writer :nombre, :edad, :peso #set
+    attr_accessor :nombre, :apellido #get y set
+    
+    attr_reader  :edad, :peso #get
+    attr_writer  :edad, :peso #set
 
     #metodos
     #metodo constructor, que inicializa las variables de instancia (@)
     def initialize(nombre="", edad = 0)
         @nombre = nombre
+        @apellido=""
         @edad = edad
         @peso = 0
+
     end
     # GETTERS AND SETTERS
 =begin
@@ -75,18 +79,19 @@ puts sixto.nombre  #puts sixto.get_nombre #-> llamando al metodo en la clase
 sixto.nombre = "Cisto"  # sixto.set_nombre("Zisto")#cambiando/asignando valor
 
 puts sixto.nombre#obteniendo el nuevo valor
-sixto.edad=35 #sixto.set_edad(35)
-sixto.set_peso(80)
-puts "Nombre: #{sixto.get_nombre}, de edad: #{sixto.get_edad} y peso: #{sixto.get_peso}"
+sixto.edad = 35  #sixto.set_edad(35)
+sixto.peso = 80 #sixto.set_peso(80)
+puts "Nombre: #{sixto.nombre}, de edad: #{sixto.edad} y peso: #{sixto.peso}"
 
-juan.set_nombre("Juan")
-juan.set_edad(30)
-juan.set_peso(75)
-puts "Nombre: #{juan.get_nombre}, de edad: #{juan.get_edad} y peso: #{juan.get_peso}"
+juan.nombre="Juan"
+juan.edad=30
+juan.peso=75
+juan.apellido = "Kastro"
+puts "Nombre: #{juan.nombre}, de edad: #{juan.edad} y peso: #{juan.peso}"
 
-felipe.set_nombre("Felipe")
-felipe.set_peso(82)
-puts "Nombre: #{felipe.get_nombre}, de edad: #{felipe.get_edad} y peso: #{felipe.get_peso}"
+felipe.nombre="Felipe"
+felipe.peso=82
+puts "Nombre: #{felipe.nombre}, de edad: #{felipe.edad} y peso: #{felipe.peso}"
 
 #inspeccionar elcontenido de las variables de instancia
 puts sixto.inspect
