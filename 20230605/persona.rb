@@ -98,3 +98,9 @@ puts sixto.inspect
 puts juan.inspect
 puts felipe.inspect
 
+class User < Persona
+    #attr_accessor :nombre, :apellido #get y set
+    #attr_reader  :edad, :peso #get
+    #attr_writer  :edad, :peso #set
+    attr_accessor :email, :clave
+end

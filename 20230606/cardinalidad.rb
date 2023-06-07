@@ -16,7 +16,7 @@ end
 
 class Direccion
     attr_accessor :calle, :numero, :sector, :comuna, :region
-    def initialize()
+    def initialize
         @calle=""
         @numero=0 
         @sector=""
@@ -35,6 +35,7 @@ end
 
 mascota1 = Mascota.new("Zoe")
 direccion1= Direccion.new
+
 persona1 = Persona.new("Israel", mascota1,direccion1)
 
 puts "persona1 #{persona1.inspect}"
@@ -43,3 +44,9 @@ puts
 puts persona1.object_id#60
 puts mascota1.object_id#80
 puts persona1.mascota.object_id#80
+
+direccion1.calle="Prat"
+direccion1.numero=123
+
+persona1.direccion.sector="pinto"
+puts "persona1 #{persona1.inspect}"
